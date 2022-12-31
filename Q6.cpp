@@ -1,20 +1,25 @@
-//Q6. Write a C++ program to swap two numbers with the help of a third variable.
-//Sample input: 2, 3
-//Sample output: 3, 2
+/* Q6 - Design a calculator to perform basic arithmetic operations (+,-,/,*,%)
+Sample Input: 8 10
+Sample Output:
+Sum = 18
+Difference = -2
+Product = 80
+Division = 0.8        */
 
 #include<iostream>
 using namespace std;
 int main() {
-    cout<<"Enter first number: ";
-    int x;
-    cin>>x;
+    cout<<"Enter the first number: ";
+    float num1;
+    cin>>num1;
     cout<<"Enter second number: ";
-    int y;
-    cin>>y;
-    int temp = x;
-    x = y;
-    y = temp;
-    cout<<"You entered first number: "<<x<<endl;
-    cout<<"You entered first number: "<<y<<endl;
+    float num2;
+    cin>>num2;
+
+    cout<<"Sum = "<<(num1 + num2)<<endl;
+    cout<<"Differemce = "<<(num1 - num2)<<endl;
+    cout<<"Product = "<<(num1 * num2)<<endl;
+    cout<<"Division = "<<(num1 / num2)<<endl;
+    
     return 0;
 }

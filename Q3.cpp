@@ -1,16 +1,17 @@
-//Q3. Write a C++ program to take length and breadth of a rectangle and print its area. 
-//Sample input: 7, 4
-//Sample output: 28
+/* Q3 - There are 45 total pupils in the class, 25 of whom are boys.
+Write a program to find how many girls received grades
+"A" if 17 boys made up 80% of the students that received grades "A".
+Sample Input: 45
+Sample Output: 19        */
 
 #include<iostream>
 using namespace std;
 int main() {
-    cout<<"Enter lenght: ";
-    int l;
-    cin>>l;
-    cout<<"Enter breadth: ";
-    int b;
-    cin>>b;
-    cout<<"area of rectangle is: "<<(l * b);
+    int total, boys, girls;
+    boys = 17;
+    total = (80 * 45) / 100;
+    girls = total - boys;
+    cout<<"Numbers of girls getting grade A: "<<girls<<endl;
+
     return 0;
 }

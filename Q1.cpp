@@ -1,16 +1,15 @@
-//Q1. - Take 2 integer values in two variables x and y and print their product.
-//Sample input: x = 2, y = 4 (both integers)
-//Sample output: 8
+/* Q1 - Write a program to check whether two numbers (entered by user) 
+are equal or not. 
+Sample Input: 1, 2
+Sample Output: 0     */
 
 #include<iostream>
 using namespace std;
 int main() {
-    cout<<"Enter x: ";
-    int x;
-    cin>>x;
-    cout<<"Enter y: ";
-    int y;
-    cin>>y;
-    cout<<"product is: "<<(x * y);
+    cout<<"Enter two numbers: ";
+    int n, m;
+    cin>>n>>m;
+    bool check = (n == m);
+    cout<<check;
     return 0;
 }
