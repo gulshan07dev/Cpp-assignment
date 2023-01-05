@@ -1,30 +1,23 @@
-/*Q5 - Write a program to print the cross pattern given below (in the shape of X):
-     *     *
-      *   *
-       * *
-        *
-       * *
-      *   *
-     *     *    */
+/*  Q5 - Given two numbers a and b, write a program to 
+print all the prime numbers present between a and b.    */
+
 #include<iostream>
 using namespace std;
-int main() {
-
-     int size;
-     cout<<"Enter size (odd): ";
-     cin>>size;
-
-     for(int i = 0; i < size; i++) {
-          for(int j = 0; j < size; j++) {
-               if(i == j || i+j == size-1) {
-                    cout<<"*";
-               }
-               else{
-                    cout<<" ";
-               }
+bool prime(int num){
+     for(int i=2;i<=num-1;i++){
+          if(num%i==0){
+               return false;
           }
-          cout<<endl;
      }
+     return true;
+}
+int main(){
+int a=2,b=1000;
 
+for(int i=a;i<=b;i++){
+     if(prime(i)){
+          cout<<i<<" ";
+     }
+}
      return 0;
 }
