@@ -1,25 +1,28 @@
-/*   Q3 - Given the age of a person, write a function 
-to check if the person is eligible to vote or not.    */
+/*  Q3 - Given an integer array and its size, reverse the array and
+print it. Here 1<size<101
+For ex: arr[]={1,2,3,4,5} n=5
+Output: 5,4,3,2,1
+arr[]={1,1,1,1,1] n=5
+Output: 1,1,1,1,1   */
 
 #include<iostream>
 using namespace std;
-bool checkEligible(int age,int age_limit){
-     if(age>=age_limit){
-          return true;
-     }
-     else{
-          return false;
-     }
-}
-int main(){
-int voting_limit=18;
-int isEligible_for_voting=checkEligible(17,voting_limit);
-if(isEligible_for_voting==1){
-     cout<<"Yes,the current person is eligible for vote";
-}
-else{
-     cout<<"No,the current person is not eligible for vote";
-}
 
-     return 0;
+void reverseArray(int arr[], int n) {
+    int i = 0;
+    int j = n-1;
+    while(i < j) {
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
+    }
+    for(int i = 0; i < n; i++) {
+        cout<<arr[i]<<" ";
+    }
+}
+int main() {
+    int arr[] = {5,4,3,2,1};
+    int n = 5;
+    reverseArray(arr, n);
+    return 0;
 }

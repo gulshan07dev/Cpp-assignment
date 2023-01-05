@@ -1,22 +1,29 @@
-/*     Q2 - Given radius of a circle. Write a 
-function to print the area and circumference of the circle     */
+/* Q2 - Given an integer array and its size, find the sum of the
+greatest and the smallest integer present in the
+array. Here 1< size <101
+For ex: arr[]={1,2,3,4,5} n=5
+Output: 6     */
 
 #include<iostream>
 using namespace std;
-double circumference(int r){    //r=radius
-   double cir=2*3.14*r;
-   return cir;
-}
-double area(int r){   //r=radius
-  double area=3.14*r*r;
-  return area;
-}
-int main(){
-int r;           //r=radius
+int main() {
+    int arr[] = {1,2,9,4,5};
+    int n = 5;
 
-cout<<"Enter radius: ";
-cin>>r;
-cout<<"circumference: "<<circumference(r)<<endl;
-cout<<"area: "<<area(r)<<endl;
-     return 0;
+    int greatest_integer = INT8_MIN;
+    int smallest_integer = INT8_MAX;
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] > greatest_integer) {
+            greatest_integer = arr[i];
+        }
+    }
+    for(int i = 0; i < n; i++) {
+        if(arr[i] < smallest_integer) {
+            smallest_integer = arr[i];
+        }
+    }
+    cout<<(greatest_integer + smallest_integer)<<endl;
+
+    return 0;
 }
