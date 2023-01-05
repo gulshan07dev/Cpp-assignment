@@ -1,15 +1,54 @@
-/* Q5 - Given an array containing n distinct integers in the range [0,n] (inclusive of both 0 and n) (inclusive of
-both 0 and n). Find and return the only number of the range that is not present in the array. Here 1<n<101.
- 
-Ex: arr=[3,0,1] 
-Output: 2
-n=3, thus the range will be [0,3]
-Ex: arr=[8,6,4,2,3,5,0,1]
-Output: 7
-n=8, thus the range will be [0,8]      */
+/* Q5 - Given a vector arr[] sorted in increasing order of n size and an integer x,
+ find the number of unique pairs that exist in the array whose absolute sum is
+  exactly x.
 
+Input: [3,1,3,5,3] x=6
+Output: 2
+Explanation: The unique pairs are 3,3 and 1,5
+
+Input: [2,2,2] x=4
+Output:  1
+Explanation: The only unique pair is 2,2         */
+ 
 #include<iostream>
+#include<vector>
 using namespace std;
+
+void uniqueSumIsXpair(int n, int arr[], int x) {
+     int i = 0;
+     int j = n-1;
+     int unqiuesumpair = 0;
+
+     while(i < j) {
+          if(abs(arr[i] + arr[j]) == x) {
+               unqiuesumpair++;
+               i++;
+               j--;
+          }
+          else if(abs(arr[i] + arr[j]) < x) {
+               i++;
+          }
+          else {
+               j--;
+          }
+     }
+     cout<<unqiuesumpair<<endl;
+}
 int main() {
-    return 0
+
+     cout<<"Enter n: ";
+     int n;
+     cin>>n;
+     cout<<"Enter arr[]: ";
+     int arr[n];
+     for(int i = 0; i < n; i++) {
+          cin>>arr[i];
+     }
+     cout<<"Enter x: ";
+     int x;
+     cin>>x;
+
+     uniqueSumIsXpair(n, arr, x);
+     
+     return 0;
 }
