@@ -1,18 +1,21 @@
-/*Q2 - Write a program to take the values of two variables a and b from the
-keyboard and then check if both the conditions 'a < 50' and 'a < b' are true.
-Sample Input: 1, 2
-Sample Output: 0        */
+//Q2 - Write a program to print absolute value of a number entered by the user.
+// input: -1
+// output: 1
 
 #include<iostream>
 using namespace std;
 int main() {
-    cout<<"Enter a and b: ";
-    int a, b;
-    cin>>a>>b;
-    bool check = false;
-    if(a < 50 && a < b) {
-        check = true;
+    int n, absolute;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    if(n < 0) {
+        absolute = (-1) * (n);
     }
-    cout<<check;
+    else {
+        absolute = n;
+    }
+    cout<<"absolute value is: "<<absolute<<endl;
+
     return 0;
 }

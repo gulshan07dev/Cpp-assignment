@@ -1,15 +1,22 @@
-/* Q1 - Write a program to check whether two numbers (entered by user) 
-are equal or not. 
-Sample Input: 1, 2
-Sample Output: 0     */
+//Q1. - Write a program which takes the values of length and breadth 
+// from user and check if it is a square or not.
+// input: lenght = 4, breadth = 5
+// output: it is a rectangle
 
 #include<iostream>
 using namespace std;
 int main() {
-    cout<<"Enter two numbers: ";
-    int n, m;
-    cin>>n>>m;
-    bool check = (n == m);
-    cout<<check;
+    int l, b;
+    cout<<"Enter lenght: ";
+    cin>>l;
+    cout<<"Enter breadth: ";
+    cin>>b;
+
+    if(l == b) {
+        cout<<"it is a square";
+    }
+    else {
+        cout<<"it is a rectangle";
+    }
     return 0;
 }

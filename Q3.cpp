@@ -1,17 +1,27 @@
-/* Q3 - There are 45 total pupils in the class, 25 of whom are boys.
-Write a program to find how many girls received grades
-"A" if 17 boys made up 80% of the students that received grades "A".
-Sample Input: 45
-Sample Output: 19        */
+//Q3- write a program to take input from user for cost price(CP) and selling price(SP) and calculate profit and loss.
 
 #include<iostream>
 using namespace std;
-int main() {
-    int total, boys, girls;
-    boys = 17;
-    total = (80 * 45) / 100;
-    girls = total - boys;
-    cout<<"Numbers of girls getting grade A: "<<girls<<endl;
+int main(){
+int CP, SP, amt;
 
+cout<<"Enter cost price: ";
+cin>>CP;
+
+cout<<"Enter selling price: ";
+cin>>SP;
+
+if(SP>CP){
+    amt=SP-CP;      //calculate profit
+    cout<<"Profit: "<<amt;
+}
+
+else if(CP>SP){
+     amt=CP-SP;    //calculate loss
+      cout<<"loss: "<<amt;
+}
+else{
+    cout<<"no profit no loss.";  //neither profit nor loss
+}
     return 0;
 }

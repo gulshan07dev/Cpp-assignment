@@ -1,22 +1,26 @@
-/* Q4 - Write a program to calculate the sum of the 
-first and the second last digit of a 5 digit number.
-Sample Input: 12345
-Sample Output: 1+5=6       */
+/*Q4- Write a program to print positive number entered by the user ,
+if user enters a negative number, it is skipped*/
 
 #include<iostream>
 using namespace std;
-int main() {
-    int n = 12345;
-    int first = (n / 10000);  //first digit
-    n = (n % 10000);
-    int second = (n / 1000);  //second digit
-    n = (n % 1000);
-    int third = (n / 100);    //third digit
-    n = (n % 100);
-    int fourth = (n / 10);    //fourth digit
-    int fifth = (n % 10);     //fifth digit
+int main(){
+int number;
 
-    cout<<(first + fifth)<<endl;
+cout<<"Enter an integer: ";
+cin>>number;
+
+if(number>0)
+{
+    cout<<"you entered a positive integer: " <<number<<endl;
+}
+else if(number==0)
+{
+    cout<<"neither positive nor negative: " <<number<<endl;
+}
+else
+{
+    cout<<"The number is negative and skipped ";
+}
 
     return 0;
 }
