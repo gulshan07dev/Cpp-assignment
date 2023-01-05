@@ -1,22 +1,16 @@
-//Q1. - Write a program which takes the values of length and breadth 
-// from user and check if it is a square or not.
-// input: lenght = 4, breadth = 5
-// output: it is a rectangle
+//Q1- Write a program to calculate factorial of a number
+
 
 #include<iostream>
 using namespace std;
 int main() {
-    int l, b;
-    cout<<"Enter lenght: ";
-    cin>>l;
-    cout<<"Enter breadth: ";
-    cin>>b;
-
-    if(l == b) {
-        cout<<"it is a square";
-    }
-    else {
-        cout<<"it is a rectangle";
-    }
-    return 0;
+     cout<<"Enter Number: ";
+     int number;
+     cin>>number;
+     int factorial=1;
+     for(int i = 1; i <= number; i++){
+          factorial *= i;
+     }
+     cout<<"Factorial of "<<number<<" is: "<<factorial;
+     return 0;
 }

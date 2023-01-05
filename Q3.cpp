@@ -1,27 +1,16 @@
-//Q3- write a program to take input from user for cost price(CP) and selling price(SP) and calculate profit and loss.
+//Q3- Write a program to find the sum of n natural number.
 
 #include<iostream>
 using namespace std;
-int main(){
-int CP, SP, amt;
+int main() {
+     cout<<"Enter a positive integer: ";
+     int num,sum;
+     cin>>num;
+     sum = 0;
 
-cout<<"Enter cost price: ";
-cin>>CP;
-
-cout<<"Enter selling price: ";
-cin>>SP;
-
-if(SP>CP){
-    amt=SP-CP;      //calculate profit
-    cout<<"Profit: "<<amt;
-}
-
-else if(CP>SP){
-     amt=CP-SP;    //calculate loss
-      cout<<"loss: "<<amt;
-}
-else{
-    cout<<"no profit no loss.";  //neither profit nor loss
-}
-    return 0;
+     for(int i = 0; i <= num; i++) {
+          sum += i;
+     }
+     cout<<"sum = "<<sum<<endl;
+     return 0;
 }

@@ -1,38 +1,30 @@
-/*Q5- Create a calculator using switch statement to perform 
-addition, subtraction, multiplication and division*/
-
+/*Q5 - Write a program to print the cross pattern given below (in the shape of X):
+     *     *
+      *   *
+       * *
+        *
+       * *
+      *   *
+     *     *    */
 #include<iostream>
 using namespace std;
-int main(){
+int main() {
 
-char op;
-float num1, num2;
+     int size;
+     cout<<"Enter size (odd): ";
+     cin>>size;
 
-cout<<"Enter an operator (+, -, *, /): ";
-cin>>op;
-cout<<"Enter two numbers: "<<endl;
-cin>>num1>>num2;
+     for(int i = 0; i < size; i++) {
+          for(int j = 0; j < size; j++) {
+               if(i == j || i+j == size-1) {
+                    cout<<"*";
+               }
+               else{
+                    cout<<" ";
+               }
+          }
+          cout<<endl;
+     }
 
-switch(op)
-{
-     case '+':
-    cout<<num1<<"+"<<num2<<" = "<<num1+num2;
-    break;
-
-     case '-':
-    cout<<num1<<"-"<<num2<<" = "<<num1-num2;
-    break;
-
-     case '*':
-    cout<<num1<<"*"<<num2<<" = "<<num1*num2;
-    break;
-
-     case '/':
-    cout<<num1<<"/"<<num2<<" = "<<num1/num2;
-    break;
-
-    default:
-    cout<<"Error! The operator is not correct";
-}
- return 0;
+     return 0;
 }

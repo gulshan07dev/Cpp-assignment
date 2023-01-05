@@ -1,21 +1,24 @@
-//Q2 - Write a program to print absolute value of a number entered by the user.
-// input: -1
-// output: 1
+//Q2- Write a program to print all Armstrong numbers between 100 to 500.
 
 #include<iostream>
 using namespace std;
-int main() {
-    int n, absolute;
-    cout<<"Enter a number: ";
-    cin>>n;
+int main(){
 
-    if(n < 0) {
-        absolute = (-1) * (n);
-    }
-    else {
-        absolute = n;
-    }
-    cout<<"absolute value is: "<<absolute<<endl;
+cout<<"Armstrong numbers in the range of 100 to 500 are :"<<endl;
+ for(int i=0;i<500;i++)
+ {
+int sum = 0;
+int t = i;
+while(t!=0)
+{
+sum = sum+((t%10)*(t%10)*(t%10));
+t = t/10;
+}
+if(sum == i)
+{
+cout << i <<"\n";
+}
+ }
 
-    return 0;
+     return 0;
 }

@@ -1,26 +1,19 @@
-/*Q4- Write a program to print positive number entered by the user ,
-if user enters a negative number, it is skipped*/
+//Q4 - Write a program to reverse a given integer number.
 
 #include<iostream>
 using namespace std;
-int main(){
-int number;
+int main() {
+     int num,reverse;
+     cout<<"Enter number: ";
+     cin>>num;
+     reverse = 0;
 
-cout<<"Enter an integer: ";
-cin>>number;
+     while(num>0){
+          int lastdigit=num%10;
+          reverse=reverse*10+lastdigit;
+     num/=10;
+     }
 
-if(number>0)
-{
-    cout<<"you entered a positive integer: " <<number<<endl;
-}
-else if(number==0)
-{
-    cout<<"neither positive nor negative: " <<number<<endl;
-}
-else
-{
-    cout<<"The number is negative and skipped ";
-}
-
-    return 0;
+     cout<<"reverse number is: "<<reverse;
+     return 0;
 }
