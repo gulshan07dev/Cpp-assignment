@@ -1,70 +1,16 @@
-/*  Q2 - Given a vector arr[] sorted in increasing order of n size and an integer x,
- find if there exists a pair in the array whose sum is exactly x.
+/* Q2 - There is a man going on a trek. The trek consists of n + 1 points at different altitudes. The
+man starts his trek on point 0 with altitude equal 0. You are given an integer array height
+of length n where height[i] is the net height in altitude between points i and i + 1 for all
+(0 <= i < n). Return the highest altitude of a point
 
- Given: n>0 
- Input: [-1,0,1,2,3] x=2
- Output: Yes
-
- input: [1,2,3,4] x=9
- output: No               */  //1 2 3 4  x = 7
+Input: height=[-4,1,6,0,-8]
+Output: 3
+Explanation: The man starts at 0 and since then the altitudes covered will be [0,-4,-3,3,3,-5] so
+the greatest altitude will be  */
 
 #include<iostream>
-#include<vector>
 using namespace std;
-
-void pairSumYesOrNot(int n, int arr[], int x) {
-     string result = "No";
-     for(int i = 0; i < n; i++) {
-          for(int j = i+1; j < n; j++) {
-               if(arr[i] + arr[j] == x) {
-                    result = "Yes";
-               }
-          }
-     }
-     cout<<result<<endl;
-}
-void pairSumYesOrNot2(int n, int arr[], int x) {
-     int i = 0;
-     int j = n-1;
-     bool find = false;
-
-     while(i < j) {
-          if(arr[i] + arr[j] == x) {
-               find = true;
-               break;
-          }
-          else if(arr[i] + arr[j] < x) {
-               i++;
-          }
-          else {
-               j--;
-          }
-     }
-     if(find == true) {
-          cout<<"YES";
-     }
-     else {
-          cout<<"NO";
-     }
-}
-
 int main() {
-
-     cout<<"Enter n: ";
-     int n;
-     cin>>n;
-
-     int arr[n];
-
-     cout<<"Enter arr[]: ";
-     for(int i = 0; i < n; i++) {
-          cin>>arr[i];
-     }
-     cout<<"Enter x: ";
-     int x;
-     cin>>x;
     
-    pairSumYesOrNot(n, arr, x);
-    pairSumYesOrNot2(n, arr, x);
-     return 0;
+    return 0;
 }
